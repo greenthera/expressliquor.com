@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://greenthera.shivantra.com/expressliquor.com/sitemap.xml
+
+# Disallow any admin or private paths (if applicable in future)
+# Disallow: /admin/

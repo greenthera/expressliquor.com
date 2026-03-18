@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | Express Liquor &amp; Wine — Spirits, Wine, Beer &amp; More in West Columbia, SC</title>
+  <meta name="description" content="Browse our vast selection of whiskey, bourbon, scotch, wine, vodka, tequila, rum, gin, cognac, and beer at Express Liquor &amp; Wine in West Columbia, SC." />
+  <meta name="keywords" content="buy whiskey West Columbia SC, wine shop Columbia SC, tequila near me, vodka store SC, rum selection West Columbia, craft beer West Columbia" />
+  <link rel="canonical" href="https://greenthera.shivantra.com/expressliquor.com/products.html" />
+  <meta property="og:title" content="Products | Express Liquor &amp; Wine" />
+  <meta property="og:description" content="2,000+ spirits, wines, and beers from around the world. Shop at Express Liquor &amp; Wine, 2201 Augusta Rd, West Columbia SC." />
+  <meta property="og:image" content="images/spirits.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600;700&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QPCP96RNWK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QPCP96RNWK');
+  </script>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23c9a84c'/><text y='.9em' font-size='70' x='12'>🍷</text></svg>" />
+  <style>
+    /* ── Products Page Extra Styles ── */
+    .cat-section { padding: 70px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .cat-section:last-of-type { border-bottom: none; }
+    .cat-header { display: flex; align-items: flex-end; justify-content: space-between; gap: 1.5rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+    .cat-meta { display: flex; flex-direction: column; }
+    .cat-num { font-family: var(--font-head); font-size: 4rem; font-weight: 700; color: rgba(201,168,76,0.10); line-height: 1; letter-spacing: -2px; margin-bottom: -1rem; }
+    .spirit-card { background: var(--dark2); border: 1px solid rgba(255,255,255,0.06); border-radius: var(--radius-lg); overflow: hidden; transition: all var(--transition); display: flex; flex-direction: column; }
+    .spirit-card:hover { border-color: rgba(201,168,76,0.25); transform: translateY(-5px); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+    .spirit-img { width: 100%; aspect-ratio: 4/3; object-fit: cover; transition: transform 0.4s; }
+    .spirit-card:hover .spirit-img { transform: scale(1.04); }
+    .spirit-body { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; }
+    .spirit-region { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
+    .spirit-name { font-family: var(--font-head); font-size: 1.15rem; color: var(--white); margin-bottom: 0.5rem; }
+    .spirit-desc { font-size: 0.85rem; color: var(--grey); line-height: 1.6; flex: 1; }
+    .spirit-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
+    .spirit-tag { background: rgba(255,255,255,0.06); border-radius: 4px; padding: 0.2rem 0.5rem; font-size: 0.7rem; color: var(--grey); }
+    .spirits-grid-6 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .filter-bar { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; padding: 1.5rem; background: var(--dark2); border-radius: var(--radius-lg); margin-bottom: 3rem; border: 1px solid rgba(255,255,255,0.06); }
+    .filter-label { font-size: 0.8rem; color: var(--grey); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; margin-right: 0.5rem; }
+    .filter-chip { padding: 0.45rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 500; border: 1px solid rgba(255,255,255,0.12); color: var(--grey); cursor: pointer; transition: all var(--transition); background: transparent; }
+    .filter-chip:hover, .filter-chip.active { background: var(--gold); color: var(--black); border-color: var(--gold); font-weight: 600; }
+    @media (max-width: 900px) { .spirits-grid-6 { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 600px) { .spirits-grid-6 { grid-template-columns: 1fr; } .cat-num { font-size: 2.5rem; } }
+  </style>
+</head>
+<body>
+
+  <!-- Age Gate -->
+  <div class="age-gate-overlay" id="ageGate" role="dialog" aria-modal="true" aria-labelledby="ageGateTitle">
+    <div class="age-gate-box">
+      <div class="age-gate-logo">Express Liquor &amp; Wine</div>
+      <div class="age-gate-icon">🍷</div>
+      <h2 id="ageGateTitle">Are You 21 or Older?</h2>
+      <p>You must be of legal drinking age to enter this website. By clicking "Yes, I Am", you confirm that you are 21 years of age or older.</p>
+      <div class="age-gate-actions">
+        <button class="btn btn-gold btn-lg" id="ageYes">Yes, I Am 21+</button>
+        <button class="btn btn-outline btn-lg" id="ageNo">No, I'm Under 21</button>
+      </div>
+      <div class="age-gate-denied" id="ageDenied">⛔ Sorry, you must be 21 or older to enter.</div>
+      <p class="age-gate-disclaimer">This website contains information about alcoholic beverages. Please drink responsibly.</p>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-icon"><img src="images/logo.png" alt="Express Liquor &amp; Wine Logo" /></div>
+          <div class="nav-logo-text">
+            <span class="nav-logo-name">Express Liquor &amp; Wine</span>
+            <span class="nav-logo-sub">West Columbia, SC</span>
+          </div>
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-menu" role="list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="products.html" class="nav-link active">Products</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="liquor-store-west-columbia-sc.html" class="nav-link">Find Us</a></li>
+          <li>
+            <a href="tel:+18039001358" class="nav-phone">
+              <svg viewBox="0 0 16 16" fill="currentColor" width="14" height="14"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"/></svg>
+              (803) 900-1358
+            </a>
+          </li>
+          <li class="nav-cta"><a href="contact.html" class="btn btn-gold btn-sm">Visit Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-content">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span>›</span>
+            <span>Products</span>
+          </nav>
+          <span class="section-label">Our Collection</span>
+          <h1>Explore Our <span class="text-gold">2,000+</span> Products</h1>
+          <p>From everyday favourites to rare collectors' bottles — discover spirits, wines, and beers from across the globe at West Columbia's finest liquor store.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter Bar -->
+    <section style="background:var(--dark); padding:2.5rem 0 0;">
+      <div class="container">
+        <div class="filter-bar">
+          <span class="filter-label">Browse:</span>
+          <a href="#whiskey" class="filter-chip active">Whiskey &amp; Bourbon</a>
+          <a href="#wine" class="filter-chip">Wine</a>
+          <a href="#vodka" class="filter-chip">Vodka</a>
+          <a href="#tequila" class="filter-chip">Tequila</a>
+          <a href="#rum" class="filter-chip">Rum</a>
+          <a href="#gin" class="filter-chip">Gin</a>
+          <a href="#cognac" class="filter-chip">Cognac &amp; Brandy</a>
+          <a href="#beer" class="filter-chip">Beer &amp; Cider</a>
+          <a href="#specialty" class="filter-chip">Fun &amp; Specialty</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── WHISKEY & BOURBON ── -->
+    <section class="cat-section" id="whiskey" style="background:var(--dark);">
+      <div class="container">
+        <div class="cat-header reveal">
+          <div class="cat-meta">
+            <span class="cat-num">01</span>
+            <span class="section-label">American &amp; Scotch</span>
+            <h2 class="section-title">Whiskey &amp; Bourbon</h2>
+            <div class="divider"></div>
+            <p class="section-subtitle">From sweet Kentucky corn mash to smoky Islay malts — our whiskey wall is a connoisseur's paradise.</p>
+          </div>
+        </div>
+        <div class="spirits-grid-6">
+          <div class="spirit-card reveal">
+            <img src="images/spirits.png" alt="Whiskey selection at Express Liquor" class="spirit-img" loading="lazy" />
+            <div class="spirit-body">
+              <p class="spirit-region">Kentucky, USA</p>
+              <h3 class="spirit-name">American Bourbon</h3>
+              <p class="spirit-desc">Jim Beam, Maker's Mark, Bulleit, Wild Turkey, Four Roses, Woodford Reserve, and more.</p>
+              <div class="spirit-tags"><span class="spirit-tag">Sweet</span><span class="spirit-tag">Oaky</span><span class="spirit-tag">Vanilla</span></div>
+            </div>
+          </div>
+          <div class="spirit-card reveal">
+            <img src="images/inside.png" alt="Scotch whisky shelf" class="spirit-img" loading="lazy" />
+            <div class="spirit-body">
+              <p class="spirit-region">Scotland</p>
+              <h3 class="spirit-name">Scotch Whisky</h3>
+              <p class="spirit-desc">Glenfiddich, Macallan, Johnnie Walker, Chivas Regal, Dewar's, and premium single malts.</p>
+              <div class="spirit-tags"><span class="spirit-tag">Peaty</span><span class="spirit-tag">Smoky</span><span class="spirit-tag">Fruity</span></div>
+            </div>
+          </div>
+          <div class="spirit-card reveal">
+            <img src="images/racks.png" alt="Tennessee whiskey and Irish whiskey" class="spirit-img" loading="lazy" />
+            <div class="spirit-body">
+              <p class="spirit-region">Tennessee &amp; Ireland</p>
+              <h3 class="spirit-name">Tennessee &amp; Irish</h3>
+              <p class="spirit-desc">Jack Daniel's, George Dickel, Jameson, Bushmills, Tullamore D.E.W., and Redbreast.</p>
+              <div class="spirit-tags"><span class="spirit-tag">Smooth</span><span class="spirit-tag">Light</span><span class="spirit-tag">Triple-distilled</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── WINE ── -->
+    <section class="cat-section" id="wine" style="background:var(--black);">
+      <div class="container">
+        <div class="cat-header reveal">
+          <div class="cat-meta">
+            <span class="cat-num">02</span>
+            <span class="section-label">Reds, Whites &amp; Rosés</span>
+            <h2 class="section-title">Wine</h2>
+            <div class="divider"></div>
+            <p class="section-subtitle">Our curated wine selection spans Old World classics and New World gems, at every price point.</p>
+          </div>
+        </div>
+        <div class="spirits-grid-6">
+          <div class="spirit-card reveal">
+            <img src="images/wine.png" alt="Red wine selection" class="spirit-img" loading="lazy" />
+            <div class="spirit-body">
+              <p class="spirit-region">France, Italy &amp; Spain</p>
+              <h3 class="spirit-name">Old World Reds</h3>
+              <p class="spirit-desc">Bordeaux, Barolo, Rioja, Côtes du Rhône — bold, structured reds from the classic wine regions.</p>
+              <div class="spirit-tags"><span class="spirit-tag">Bold</span><span class="spirit-tag">Tannic</span><span class="spirit-tag">Earthy</span></div>
+            </div>
+          </div>
+          <div class="spirit-card reveal">
+            <img src="images/wine.png" alt="White wine selection" class="spirit-img" loading="lazy" />
+            <div class="spirit-body">
+              <p class="spirit-region">California &amp; Argentina</p>
+              <h3 class="spirit-name">New World Selections</h3>
+              <p class="spirit-desc">Napa Cabernets, Chilean Malbecs, Australian Shiraz, and bright Californian Chardonnays.</p>
+              <div class="spirit-tags"><span class="spirit-tag">Fruity</span><span class="spirit-tag">Full-bodied</span><span class="spirit-tag">Buttery</span></div>
+            </div>
+          </div>
+          <div class="spirit-card reveal">
+            <img src="images/wine.png" alt="Rosé and sparkling wine" class="spirit-img" loading="lazy" />
+            <div class="spirit-body">
+              <p class="spirit-region">Worldwide</p>
+              <h3 class="spirit-name">Rosé, Sparkling &amp; Dessert</h3>
+              <p class="spirit-desc">Stella Rosa, Meiomi, Prosecco, Moscato, Champagne, and late-harvest dessert wines.</p>
+              <div class="spirit-tags"><span class="spirit-tag">Sweet</span><span class="spirit-tag">Bubbly</span><span class="spirit-tag">Light</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── VODKA ── -->
+    <section class="cat-section" id="vodka" style="background:var(--dark);">
+      <div class="container">
+        <div class="cat-header reveal">
+          <div class="cat-meta">
+            <span class="cat-num">03</span>
+            <span class="section-label">Classic &amp; Craft</span>
+            <h2 class="section-title">Vodka</h2>
+            <div class="divider"></div>
+            <p class="section-subtitle">From crystal-clear Russian traditionals to trendy American craft vodkas — we carry the full spectrum.</p>
+          </div>
+        </div>
+        <div class="spirits-grid-6">
+          <div class="spirit-card reveal">
+            <img src="images/still.png" alt="Tito's Handmade Vodka" class="spirit-img" loading="lazy" />
+            <div class="spirit-body">
+              <p class="spirit-region">Texas, USA</p>
+              <h3 class="spirit-name">Tito's Handmade Vodka</h3>
+              <p class="spirit-desc">America's top-selling craft vodka. Pot-distilled in Austin, Texas with exceptional smoothness.</p>
+              <div class="spirit-tags"><span class="spirit-tag">Smooth</span><span class="spirit-tag">Clean</span><span class="spirit-tag">Gluten-free</span></div>
+            </div>
+          </div>
+          <div class="spirit-card reveal">
+            <img src="images/racks.png" alt="Premium imported vodkas" class="spirit-img" loading="lazy" />
+            <div class="spirit-body">
+              <p class="spirit-region">Russia &amp; Sweden</p>
+              <h3 class="spirit-name">Premium Imports</h3>
+              <p class="spirit-desc">Grey Goose, Belvedere, Ketel One, Svedka, Absolut, Ciroc, and Stolichnaya.</p>
+              <div class="spirit-tags"><span class="spirit-tag">Crisp</span><span class="spirit-tag">Neutral</span><span class="spirit-tag">Premium</span></div>
+            </div>
+          </div>
+          <div class="spirit-card reveal">
+            <img src="images/inside.png" alt="Flavoured vodkas on shelf" class="spirit-img" loading="lazy" />
+            <div class="spirit-body">
+              <p class="spirit-region">Worldwide</p>
+              <h3 class="spirit-name">Flavoured Vodkas</h3>
+              <p class="spirit-desc">New Amsterdam, Pinnacle, UV, and dozens of flavored options — citrus, berry, vanilla, and more.</p>
+              <div class="spirit-tags"><span class="spirit-tag">Flavoured</span><span class="spirit-tag">Mixable</span><span class="spirit-tag">Fun</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TEQUILA ── -->
+    <section class="cat-section" id="tequila" style="background:var(--black);">
+      <div class="container">
+        <div class="cat-header reveal">
+          <div class="cat-meta">
+            <span class="cat-num">04</span>
+            <span class="section-label">Blanco, Reposado &amp; Añejo</span>
+            <h2 class="section-title">Tequila &amp; Mezcal</h2>
+            <div class="divider"></div>
+            <p class="section-subtitle">Crafted from Blue Agave in Jalisco, Mexico — from party pours to sipping treasures.</p>
+          </div>
+        </div>
+        <div class="spirits-grid-6">
+          <div class="spirit-card reveal">
+            <img src="images/new-stock-1.png" alt="Lunazul Tequila Blanco bottles on display" class="spirit-img" loading="lazy" />
+            <div class="spirit-body">
+              <p class="spirit-region">Jalisco, Mexico</p>
+              <h3 class="spirit-name">Silver &amp; Blanco</h3>
+              <p class="spirit-desc">Lunazul, Patron Silver, Jose Cuervo, 1800 Silver, Hornitos, Espolon — fresh, crisp and agave-forward.</p>
+              <div class="spirit-tags"><span class="spirit-tag">Crisp</span><span class="spirit-tag">Agave</span><span class="spirit-tag">Fresh</span></div>
+            </div>
+          </div>
+          <div class="spirit-card reveal">
+            <img src="images/new-stock-2.png" alt="Lunazul Tequila Reposado shelf row" class="spirit-img" loading="lazy" />
+            <div class="spirit-body">
+              <p class="spirit-region">Jalisco, Mexico</p>
+              <h3 class="spirit-name">Reposado &amp; Añejo</h3>
+              <p class="spirit-desc">Lunazul Reposado, Don Julio, Casamigos, Cazadores, Herradura — aged in oak for smooth, complex flavors.</p>
+              <div class="spirit-tags"><span class="spirit-tag">Oaky</span><span class="spirit-tag">Smooth</span><span class="spirit-tag">Complex</span></div>
+            </div>
+          </div>
+          <div class="spirit-card reveal">
+            <img src="images/spirits.png" alt="Mezcal bottles" class="spirit-img" loading="lazy" />
+            <div class="spirit-body">
+              <p class="spirit-region">Oaxaca, Mexico</p>
+              <h3 class="spirit-name">Mezcal</h3>
+              <p class="spirit-desc">Del Maguey, Montelobos, Ilegal — smoky artisanal mezcals handcrafted from roasted agave hearts.</p>
+              <div class="spirit-tags"><span class="spirit-tag">Smoky</span><span class="spirit-tag">Artisanal</span><span class="spirit-tag">Complex</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── RUM ── -->
+    <section class="cat-section" id="rum" style="background:var(--dark);">
+      <div class="container">
+        <div class="cat-header reveal">
+          <div class="cat-meta">
+            <span class="cat-num">05</span>
+            <span class="section-label">Light, Dark &amp; Spiced</span>
+            <h2 class="section-title">Rum</h2>
+            <div class="divider"></div>
+            <p class="section-subtitle">From the sugar cane fields of the Caribbean to the tropics of Central America — smooth, rich, and full of character.</p>
+          </div>
+        </div>
+        <div class="spirits-grid-6">
+          <div class="spirit-card reveal">
+            <img src="images/racks.png" alt="Light and white rum bottles" class="spirit-img" loading="lazy" />
+            <div class="spirit-body">
+              <p class="spirit-region">Puerto Rico &amp; Barbados</p>
+              <h3 class="spirit-name">White &amp; Light Rum</h3>
+              <p class="spirit-desc">Bacardi, Brugal, Cruzan — light, mixable rums perfect for cocktails and mojitos.</p>
+              <div class="spirit-tags"><span class="spirit-tag">Light</span><span class="spirit-tag">Crisp</span><span class="spirit-tag">Mixable</span></div>
+            </div>
+          </div>
+          <div class="spirit-card reveal">
+            <img src="images/inside.png" alt="Dark and aged rum" class="spirit-img" loading="lazy" />
+            <div class="spirit-body">
+              <p class="spirit-region">Jamaica &amp; Trinidad</p>
+              <h3 class="spirit-name">Dark &amp; Aged Rum</h3>
+              <p class="spirit-desc">Mount Gay, Appleton, Diplomatico, El Dorado — rich, molasses-forward sipping rums.</p>
+              <div class="spirit-tags"><span class="spirit-tag">Rich</span><span class="spirit-tag">Molasses</span><span class="spirit-tag">Aged</span></div>
+            </div>
+          </div>
+          <div class="spirit-card reveal">
+            <img src="images/spirits.png" alt="Spiced rum selection" class="spirit-img" loading="lazy" />
+            <div class="spirit-body">
+              <p class="spirit-region">Worldwide</p>
+              <h3 class="spirit-name">Spiced &amp; Flavoured Rum</h3>
+              <p class="spirit-desc">Captain Morgan, Kraken, Malibu, Sailor Jerry — the party favourites for every occasion.</p>
+              <div class="spirit-tags"><span class="spirit-tag">Spiced</span><span class="spirit-tag">Sweet</span><span class="spirit-tag">Party-ready</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── GIN ── -->
+    <section class="cat-section" id="gin" style="background:var(--black);">
+      <div class="container">
+        <div class="cat-header reveal">
+          <div class="cat-meta">
+            <span class="cat-num">06</span>
+            <span class="section-label">London Dry &amp; Craft</span>
+            <h2 class="section-title">Gin</h2>
+            <div class="divider"></div>
+            <p class="section-subtitle">Botanical, bold and beautiful — from classic London Dry to contemporary floral and citrus expressions.</p>
+          </div>
+        </div>
+        <div class="spirits-grid-6">
+          <div class="spirit-card reveal">
+            <img src="images/racks.png" alt="London Dry gin bottles" class="spirit-img" loading="lazy" />
+            <div class="spirit-body">
+              <p class="spirit-region">England</p>
+              <h3 class="spirit-name">London Dry Gins</h3>
+              <p class="spirit-desc">Tanqueray, Beefeater, Gordon's, Bombay Sapphire — the quintessential G&amp;T companions.</p>
+              <div class="spirit-tags"><span class="spirit-tag">Juniper</span><span class="spirit-tag">Herbal</span><span class="spirit-tag">Dry</span></div>
+            </div>
+          </div>
+          <div class="spirit-card reveal">
+            <img src="images/spirits.png" alt="Craft gin bottles" class="spirit-img" loading="lazy" />
+            <div class="spirit-body">
+              <p class="spirit-region">USA &amp; Worldwide</p>
+              <h3 class="spirit-name">Craft &amp; Contemporary</h3>
+              <p class="spirit-desc">Hendrick's, The Botanist, Monkey 47, Aviation — innovative botanicals for modern gin lovers.</p>
+              <div class="spirit-tags"><span class="spirit-tag">Floral</span><span class="spirit-tag">Citrus</span><span class="spirit-tag">Modern</span></div>
+            </div>
+          </div>
+          <div class="spirit-card reveal">
+            <img src="images/inside.png" alt="Sloe gin and flavored gin" class="spirit-img" loading="lazy" />
+            <div class="spirit-body">
+              <p class="spirit-region">Scotland &amp; UK</p>
+              <h3 class="spirit-name">Flavoured Gins</h3>
+              <p class="spirit-desc">Strawberry, elderflower, raspberry and sloe — vibrant, versatile, and perfect for spritz cocktails.</p>
+              <div class="spirit-tags"><span class="spirit-tag">Sweet</span><span class="spirit-tag">Fruity</span><span class="spirit-tag">Versatile</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── COGNAC & BRANDY ── -->
+    <section class="cat-section" id="cognac" style="background:var(--dark);">
+      <div class="container">
+        <div class="cat-header reveal">
+          <div class="cat-meta">
+            <span class="cat-num">07</span>
+            <span class="section-label">French &amp; Aged</span>
+            <h2 class="section-title">Cognac &amp; Brandy</h2>
+            <div class="divider"></div>
+            <p class="section-subtitle">Refined, elegant, and deeply complex — the spirit of France and beyond.</p>
+          </div>
+        </div>
+        <div class="spirits-grid-6">
+          <div class="spirit-card reveal">
+            <img src="images/inside.png" alt="Hennessy and Courvoisier cognac" class="spirit-img" loading="lazy" />
+            <div class="spirit-body">
+              <p class="spirit-region">Cognac, France</p>
+              <h3 class="spirit-name">French Cognac</h3>
+              <p class="spirit-desc">Hennessy, Rémy Martin, Martell, Courvoisier — VS, VSOP, XO and beyond.</p>
+              <div class="spirit-tags"><span class="spirit-tag">Elegant</span><span class="spirit-tag">Aged</span><span class="spirit-tag">Grape</span></div>
+            </div>
+          </div>
+          <div class="spirit-card reveal">
+            <img src="images/racks.png" alt="Brandy and Armagnac" class="spirit-img" loading="lazy" />
+            <div class="spirit-body">
+              <p class="spirit-region">France &amp; USA</p>
+              <h3 class="spirit-name">Brandy &amp; Armagnac</h3>
+              <p class="spirit-desc">E&amp;J, Paul Masson, Torres, Korbel — smooth, approachable brandies for sipping and mixing.</p>
+              <div class="spirit-tags"><span class="spirit-tag">Smooth</span><span class="spirit-tag">Oak</span><span class="spirit-tag">Caramel</span></div>
+            </div>
+          </div>
+          <div class="spirit-card reveal">
+            <img src="images/spirits.png" alt="Liqueurs and cordials" class="spirit-img" loading="lazy" />
+            <div class="spirit-body">
+              <p class="spirit-region">Worldwide</p>
+              <h3 class="spirit-name">Liqueurs &amp; Cordials</h3>
+              <p class="spirit-desc">Baileys, Kahlúa, Grand Marnier, Amaretto, Chambord — sweet, indulgent, and wildly versatile.</p>
+              <div class="spirit-tags"><span class="spirit-tag">Sweet</span><span class="spirit-tag">Dessert</span><span class="spirit-tag">Cocktail</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── BEER & CIDER ── -->
+    <section class="cat-section" id="beer" style="background:var(--black);">
+      <div class="container">
+        <div class="cat-header reveal">
+          <div class="cat-meta">
+            <span class="cat-num">08</span>
+            <span class="section-label">Domestic, Import &amp; Craft</span>
+            <h2 class="section-title">Beer &amp; Cider</h2>
+            <div class="divider"></div>
+            <p class="section-subtitle">From cold lagers to bold IPAs and refreshing ciders — something for every beer lover.</p>
+          </div>
+        </div>
+        <div class="spirits-grid-6">
+          <div class="spirit-card reveal">
+            <img src="images/racks.png" alt="Domestic beer selection" class="spirit-img" loading="lazy" />
+            <div class="spirit-body">
+              <p class="spirit-region">USA</p>
+              <h3 class="spirit-name">Domestic Favorites</h3>
+              <p class="spirit-desc">Bud Light, Coors, Miller, Michelob Ultra, Natural Light — the classics, always cold and in stock.</p>
+              <div class="spirit-tags"><span class="spirit-tag">Lager</span><span class="spirit-tag">Light</span><span class="spirit-tag">Refreshing</span></div>
+            </div>
+          </div>
+          <div class="spirit-card reveal">
+            <img src="images/inside.png" alt="Imported beer selection" class="spirit-img" loading="lazy" />
+            <div class="spirit-body">
+              <p class="spirit-region">Europe &amp; Mexico</p>
+              <h3 class="spirit-name">Imports &amp; World Lagers</h3>
+              <p class="spirit-desc">Corona, Modelo, Heineken, Stella Artois, Guinness, Dos Equis, and more from around the globe.</p>
+              <div class="spirit-tags"><span class="spirit-tag">Import</span><span class="spirit-tag">Premium</span><span class="spirit-tag">Global</span></div>
+            </div>
+          </div>
+          <div class="spirit-card reveal">
+            <img src="images/spirits.png" alt="Craft beer and cider" class="spirit-img" loading="lazy" />
+            <div class="spirit-body">
+              <p class="spirit-region">USA &amp; Local SC</p>
+              <h3 class="spirit-name">Craft Beer &amp; Cider</h3>
+              <p class="spirit-desc">Local South Carolina craft brews, IPAs, stouts, sours, and hard ciders from the best regional breweries.</p>
+              <div class="spirit-tags"><span class="spirit-tag">Craft</span><span class="spirit-tag">Hoppy</span><span class="spirit-tag">Local</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FUN & SPECIALTY ── -->
+    <section class="cat-section" id="specialty" style="background:var(--dark);">
+      <div class="container">
+        <div class="cat-header reveal">
+          <div class="cat-meta">
+            <span class="cat-num">09</span>
+            <span class="section-label">RTD, Novelty &amp; Party Picks</span>
+            <h2 class="section-title">Fun &amp; Specialty Drinks</h2>
+            <div class="divider"></div>
+            <p class="section-subtitle">From ready-to-drink cocktails and novelty shots to party packs and seasonal specials — there's always something fun on our shelves.</p>
+          </div>
+        </div>
+        <div class="spirits-grid-6">
+          <div class="spirit-card reveal">
+            <img src="images/new-stock-3.png" alt="Fun drinks, novelty shots and RTD beverages at Express Liquor & Wine" class="spirit-img" loading="lazy" />
+            <div class="spirit-body">
+              <p class="spirit-region">USA &amp; Worldwide</p>
+              <h3 class="spirit-name">Ready-to-Drink (RTD)</h3>
+              <p class="spirit-desc">Bigg Buzz, Elf shots, B-52, and a growing range of premixed cocktails and novelty drinks.</p>
+              <div class="spirit-tags"><span class="spirit-tag">RTD</span><span class="spirit-tag">Fun</span><span class="spirit-tag">Party</span></div>
+            </div>
+          </div>
+          <div class="spirit-card reveal">
+            <img src="images/cars.png" alt="Collectible and gift items in store" class="spirit-img" loading="lazy" />
+            <div class="spirit-body">
+              <p class="spirit-region">Collectors</p>
+              <h3 class="spirit-name">Gift &amp; Collectibles</h3>
+              <p class="spirit-desc">Unique gift sets, collectable bottles, and novelty items — perfect for any celebration or as a standout gift.</p>
+              <div class="spirit-tags"><span class="spirit-tag">Gift</span><span class="spirit-tag">Unique</span><span class="spirit-tag">Collectible</span></div>
+            </div>
+          </div>
+          <div class="spirit-card reveal">
+            <img src="images/still.png" alt="Tito's Handmade Vodka copper still display" class="spirit-img" loading="lazy" />
+            <div class="spirit-body">
+              <p class="spirit-region">Austin, Texas</p>
+              <h3 class="spirit-name">Tito's Handmade Vodka</h3>
+              <p class="spirit-desc">America's most popular craft vodka — pot-distilled, gluten-free, and incredibly smooth. A fan favourite.</p>
+              <div class="spirit-tags"><span class="spirit-tag">Craft</span><span class="spirit-tag">Smooth</span><span class="spirit-tag">Gluten-free</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+      <div class="cta-banner-bg"></div>
+      <div class="container">
+        <div class="cta-banner-content reveal">
+          <span class="section-label">Can't Find What You Need?</span>
+          <h2>We'll Find It For You</h2>
+          <p>Looking for a specific bottle or brand? Give us a call and our team will track it down or arrange a special order just for you.</p>
+          <div class="cta-actions">
+            <a href="tel:+18039001358" class="btn btn-gold btn-lg">📞 Call (803) 900-1358</a>
+            <a href="contact.html" class="btn btn-outline btn-lg">Visit the Store</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="nav-logo">
+              <div class="nav-logo-icon"><img src="images/logo.png" alt="Express Liquor &amp; Wine Logo" /></div>
+              <div class="nav-logo-text">
+                <span class="nav-logo-name">Express Liquor &amp; Wine</span>
+                <span class="nav-logo-sub">West Columbia, SC</span>
+              </div>
+            </a>
+            <p class="footer-brand-desc">Premium spirits, fine wines, craft beers, and liquors from around the world. 2201 Augusta Rd, West Columbia, SC.</p>
+            <div class="footer-socials">
+              <a href="https://www.facebook.com/p/Express-Liquor-Wine-61587490374263/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook" title="Facebook">f</a>
+              <a href="https://www.instagram.com/expressliquorandwine" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram" title="Instagram">in</a>
+              <a href="https://www.tiktok.com/@expressliquorandwine" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok" title="TikTok">t</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Categories</h4>
+            <ul class="footer-links">
+              <li><a href="#whiskey">Whiskey &amp; Bourbon</a></li>
+              <li><a href="#wine">Wine</a></li>
+              <li><a href="#vodka">Vodka &amp; Gin</a></li>
+              <li><a href="#tequila">Tequila</a></li>
+              <li><a href="#rum">Rum</a></li>
+              <li><a href="#cognac">Cognac &amp; Brandy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <address style="font-style:normal;">
+              <div class="footer-contact-item">
+                <span class="footer-contact-icon">📍</span>
+                <p>2201 Augusta Rd<br />West Columbia, SC 29169</p>
+              </div>
+              <div class="footer-contact-item">
+                <span class="footer-contact-icon">📞</span>
+                <p><a href="tel:+18039001358">(803) 900-1358</a></p>
+              </div>
+              <div class="footer-contact-item">
+                <span class="footer-contact-icon">🕐</span>
+                <p>Mon–Sat: 9 AM – 10 PM<br />Sunday: 12 PM – 8 PM</p>
+              </div>
+            </address>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p class="footer-copy">© 2025 Express Liquor &amp; Wine. All rights reserved.</p>
+          <nav class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></nav>
+          <p class="footer-dev">Developed by <a href="https://shivantra.com" target="_blank" rel="noopener noreferrer">Shivantra</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="age-notice">🔞 Must be 21+ to purchase alcohol. Drink responsibly. Don't drink and drive.</div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <!-- Floating Action Buttons -->
+  <div class="fab-stack">
+    <a href="https://wa.me/18039001358" class="fab fab-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.548 4.106 1.508 5.836L.057 23.643a.5.5 0 0 0 .625.625l5.807-1.451A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.793 9.793 0 0 1-4.998-1.367l-.358-.213-3.714.928.944-3.617-.234-.372A9.818 9.818 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+    </a>
+    <button class="fab fab-top" id="fabTop" aria-label="Back to top">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Express Liquor &amp; Wine — West Columbia, SC Liquor Store</title>
+  <meta name="description" content="Learn about Express Liquor &amp; Wine — West Columbia's trusted neighborhood liquor store on Augusta Rd. A passion for great spirits, wines, and serving the Midlands community." />
+  <meta name="keywords" content="about Express Liquor Wine West Columbia SC, liquor store Augusta Rd, family owned liquor store SC, West Columbia spirits" />
+  <link rel="canonical" href="https://greenthera.shivantra.com/expressliquor.com/about.html" />
+  <meta property="og:title" content="About Express Liquor &amp; Wine | West Columbia, SC" />
+  <meta property="og:description" content="West Columbia's neighborhood liquor store serving the Midlands with premium spirits, wine, and beer from around the world." />
+  <meta property="og:image" content="images/oustide.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600;700&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QPCP96RNWK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QPCP96RNWK');
+  </script>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23c9a84c'/><text y='.9em' font-size='70' x='12'>🍷</text></svg>" />
+  <style>
+    .mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .mission-grid.reverse { direction: rtl; }
+    .mission-grid.reverse > * { direction: ltr; }
+    .full-img { width: 100%; border-radius: var(--radius-lg); aspect-ratio: 16/10; object-fit: cover; box-shadow: var(--shadow-lg); }
+    .values-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3rem; }
+    .value-card { text-align: center; padding: 2rem 1.5rem; background: var(--dark2); border: 1px solid rgba(255,255,255,0.06); border-radius: var(--radius-lg); transition: all var(--transition); }
+    .value-card:hover { border-color: rgba(201,168,76,0.25); transform: translateY(-4px); }
+    .value-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+    .value-card h3 { font-size: 1rem; color: var(--white); margin-bottom: 0.5rem; }
+    .value-card p { font-size: 0.85rem; color: var(--grey); line-height: 1.6; }
+    .timeline { position: relative; padding-left: 2rem; }
+    .timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, var(--gold), var(--gold-dark), transparent); }
+    .timeline-item { position: relative; margin-bottom: 2.5rem; }
+    .timeline-dot { position: absolute; left: -2.45rem; top: 0.3rem; width: 14px; height: 14px; background: var(--gold); border-radius: 50%; border: 2px solid var(--dark); }
+    .timeline-year { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 0.3rem; }
+    .timeline-item h3 { font-size: 1.05rem; color: var(--white); margin-bottom: 0.4rem; }
+    .timeline-item p { font-size: 0.875rem; color: var(--grey); line-height: 1.65; }
+    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+    .team-card { text-align: center; }
+    .team-avatar { width: 100px; height: 100px; background: linear-gradient(135deg, var(--gold-dark), var(--wine)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 1rem; font-family: var(--font-head); color: var(--white); font-weight: 700; }
+    .team-name { font-size: 1.1rem; font-family: var(--font-head); color: var(--white); margin-bottom: 0.25rem; }
+    .team-role { font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }
+    .team-bio { font-size: 0.85rem; color: var(--grey); line-height: 1.6; margin-top: 0.75rem; }
+    @media (max-width: 900px) { .mission-grid { grid-template-columns: 1fr; gap: 2.5rem; } .mission-grid.reverse { direction: ltr; } .values-grid { grid-template-columns: repeat(2,1fr); } .team-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .values-grid { grid-template-columns: 1fr 1fr; } .team-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <!-- Age Gate -->
+  <div class="age-gate-overlay" id="ageGate" role="dialog" aria-modal="true" aria-labelledby="ageGateTitle">
+    <div class="age-gate-box">
+      <div class="age-gate-logo">Express Liquor &amp; Wine</div>
+      <div class="age-gate-icon">🍷</div>
+      <h2 id="ageGateTitle">Are You 21 or Older?</h2>
+      <p>You must be of legal drinking age to enter this website.</p>
+      <div class="age-gate-actions">
+        <button class="btn btn-gold btn-lg" id="ageYes">Yes, I Am 21+</button>
+        <button class="btn btn-outline btn-lg" id="ageNo">No, I'm Under 21</button>
+      </div>
+      <div class="age-gate-denied" id="ageDenied">⛔ Sorry, you must be 21 or older to enter.</div>
+      <p class="age-gate-disclaimer">Please drink responsibly.</p>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-icon"><img src="images/logo.png" alt="Express Liquor &amp; Wine Logo" /></div>
+          <div class="nav-logo-text">
+            <span class="nav-logo-name">Express Liquor &amp; Wine</span>
+            <span class="nav-logo-sub">West Columbia, SC</span>
+          </div>
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+        <ul class="nav-menu" role="list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="about.html" class="nav-link active">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="liquor-store-west-columbia-sc.html" class="nav-link">Find Us</a></li>
+          <li>
+            <a href="tel:+18039001358" class="nav-phone">
+              <svg viewBox="0 0 16 16" fill="currentColor" width="14" height="14"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"/></svg>
+              (803) 900-1358
+            </a>
+          </li>
+          <li class="nav-cta"><a href="contact.html" class="btn btn-gold btn-sm">Visit Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-content">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a><span>›</span><span>About</span>
+          </nav>
+          <span class="section-label">Our Story</span>
+          <h1>Serving West Columbia <span class="text-gold">With Passion</span></h1>
+          <p>From a neighborhood store on Augusta Rd to the Midlands' most beloved spirits destination — here's our story.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="section-pad" style="background:var(--dark);">
+      <div class="container">
+        <div class="mission-grid">
+          <div class="reveal">
+            <img src="images/oustide.png" alt="Express Liquor & Wine exterior view on Augusta Rd" class="full-img" loading="lazy" />
+          </div>
+          <div class="reveal">
+            <span class="section-label">Who We Are</span>
+            <h2 class="section-title">More Than a Liquor Store — <span class="text-gold">A Community Staple</span></h2>
+            <div class="divider"></div>
+            <p style="color:var(--grey-light);line-height:1.8;margin-bottom:1.25rem;">
+              Express Liquor &amp; Wine was founded with a simple mission: to bring the world's finest spirits, wines, and beers to the people of West Columbia, South Carolina — at prices that make sense and with service that feels personal.
+            </p>
+            <p style="color:var(--grey);line-height:1.8;margin-bottom:1.25rem;">
+              Nestled on Augusta Road, we've spent years building a store that locals trust and visitors discover with delight. Whether you're picking up a case of Corona for the weekend, searching for a rare Scotch single malt, or exploring wines for a dinner party — our doors are open and our team is ready to help.
+            </p>
+            <p style="color:var(--grey);line-height:1.8;">
+              We believe every bottle tells a story. From the soil of a French vineyard to the copper pot stills of Kentucky, each product on our shelves represents a craft, a culture, and a tradition. We are proud to share that with you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="section-pad-sm" style="background:linear-gradient(135deg,var(--dark2),var(--dark3));border-top:1px solid rgba(201,168,76,0.10);border-bottom:1px solid rgba(201,168,76,0.10);">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center;">
+          <div class="reveal">
+            <div style="font-family:var(--font-head);font-size:3rem;font-weight:700;color:var(--gold);line-height:1;" data-count="2000" data-suffix="+">2000+</div>
+            <p style="font-size:0.85rem;color:var(--grey);text-transform:uppercase;letter-spacing:0.1em;margin-top:0.5rem;">Products</p>
+          </div>
+          <div class="reveal">
+            <div style="font-family:var(--font-head);font-size:3rem;font-weight:700;color:var(--gold);line-height:1;" data-count="50" data-suffix="+">50+</div>
+            <p style="font-size:0.85rem;color:var(--grey);text-transform:uppercase;letter-spacing:0.1em;margin-top:0.5rem;">Countries Represented</p>
+          </div>
+          <div class="reveal">
+            <div style="font-family:var(--font-head);font-size:3rem;font-weight:700;color:var(--gold);line-height:1;" data-count="15" data-suffix="+">15+</div>
+            <p style="font-size:0.85rem;color:var(--grey);text-transform:uppercase;letter-spacing:0.1em;margin-top:0.5rem;">Years in Business</p>
+          </div>
+          <div class="reveal">
+            <div style="font-family:var(--font-head);font-size:3rem;font-weight:700;color:var(--gold);line-height:1;" data-count="10000" data-suffix="+">10000+</div>
+            <p style="font-size:0.85rem;color:var(--grey);text-transform:uppercase;letter-spacing:0.1em;margin-top:0.5rem;">Happy Customers</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="section-pad" style="background:var(--black);">
+      <div class="container">
+        <div class="text-center reveal">
+          <span class="section-label">What Drives Us</span>
+          <h2 class="section-title">Our Core Values</h2>
+          <div class="divider divider-center"></div>
+        </div>
+        <div class="values-grid">
+          <div class="value-card reveal">
+            <span class="value-icon" aria-hidden="true">🌍</span>
+            <h3>Global Curiosity</h3>
+            <p>We source spirits and wines from every corner of the world, bringing global flavors to your doorstep.</p>
+          </div>
+          <div class="value-card reveal">
+            <span class="value-icon" aria-hidden="true">🤝</span>
+            <h3>Community First</h3>
+            <p>We are proud members of the West Columbia community and strive to give back through service and support.</p>
+          </div>
+          <div class="value-card reveal">
+            <span class="value-icon" aria-hidden="true">🎓</span>
+            <h3>Knowledge Sharing</h3>
+            <p>Our staff are trained enthusiasts who love sharing what they know — no question is too basic or too advanced.</p>
+          </div>
+          <div class="value-card reveal">
+            <span class="value-icon" aria-hidden="true">🛡️</span>
+            <h3>Responsible Service</h3>
+            <p>We comply fully with South Carolina ABC regulations and actively promote responsible alcohol consumption.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our History -->
+    <section class="section-pad" style="background:var(--dark);">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;">
+          <div class="reveal">
+            <span class="section-label">How We Got Here</span>
+            <h2 class="section-title">Our <span class="text-gold">Journey</span></h2>
+            <div class="divider"></div>
+            <p style="color:var(--grey);line-height:1.8;margin-bottom:2rem;">From humble beginnings to West Columbia's go-to spirits destination — here's how Express Liquor &amp; Wine grew over the years.</p>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <p class="timeline-year">Est. 2009</p>
+                <h3>Doors Open on Augusta Rd</h3>
+                <p>Express Liquor &amp; Wine opened its doors with a core selection of spirits and a commitment to serving the West Columbia community.</p>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <p class="timeline-year">2012</p>
+                <h3>Wine Wall Expansion</h3>
+                <p>We expanded our wine collection significantly, adding hundreds of domestic and international labels to satisfy growing demand.</p>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <p class="timeline-year">2016</p>
+                <h3>Premium Spirits &amp; Craft Collection</h3>
+                <p>We launched our premium spirits section and began stocking rare, limited-edition releases and craft distillery products.</p>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <p class="timeline-year">2020</p>
+                <h3>Renovation &amp; Brand Refresh</h3>
+                <p>Full store renovation with improved layout, better displays, and expanded product categories including craft beer and specialty liqueurs.</p>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <p class="timeline-year">Today</p>
+                <h3>2,000+ Products &amp; Growing</h3>
+                <p>Today we carry over 2,000 products from 50+ countries and continue to grow, innovate, and serve the people of the Midlands.</p>
+              </div>
+            </div>
+          </div>
+          <div class="reveal">
+            <img src="images/inside.png" alt="Inside Express Liquor & Wine showing full range of spirits" class="full-img" loading="lazy" style="aspect-ratio:3/4;margin-bottom:1.5rem;" />
+            <img src="images/car-rack.png" alt="Unique display inside Express Liquor & Wine" class="full-img" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Store Imagery -->
+    <section class="section-pad" style="background:var(--black);">
+      <div class="container">
+        <div class="text-center reveal">
+          <span class="section-label">Our Space</span>
+          <h2 class="section-title">Come See For Yourself</h2>
+          <div class="divider divider-center"></div>
+          <p class="section-subtitle">A spacious, well-organized store where every visit is a discovery.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.5rem;" class="about-store-gallery">
+          <div class="reveal" style="border-radius:var(--radius-lg);overflow:hidden;">
+            <img src="images/front-gate.png" alt="Express Liquor & Wine entrance" style="width:100%;aspect-ratio:4/3;object-fit:cover;" loading="lazy" />
+          </div>
+          <div class="reveal" style="border-radius:var(--radius-lg);overflow:hidden;">
+            <img src="images/wine.png" alt="Wine selection wall" style="width:100%;aspect-ratio:4/3;object-fit:cover;" loading="lazy" />
+          </div>
+          <div class="reveal" style="border-radius:var(--radius-lg);overflow:hidden;">
+            <img src="images/spirits.png" alt="Spirits aisle" style="width:100%;aspect-ratio:4/3;object-fit:cover;" loading="lazy" />
+          </div>
+          <div class="reveal" style="border-radius:var(--radius-lg);overflow:hidden;">
+            <img src="images/racks.png" alt="Full store racks" style="width:100%;aspect-ratio:4/3;object-fit:cover;" loading="lazy" />
+          </div>
+          <div class="reveal" style="border-radius:var(--radius-lg);overflow:hidden;">
+            <img src="images/new-stock-1.png" alt="Lunazul Tequila bottles on display shelf" style="width:100%;aspect-ratio:4/3;object-fit:cover;" loading="lazy" />
+          </div>
+          <div class="reveal" style="border-radius:var(--radius-lg);overflow:hidden;">
+            <img src="images/new-stock-2.png" alt="Tequila reposado shelf row" style="width:100%;aspect-ratio:4/3;object-fit:cover;" loading="lazy" />
+          </div>
+          <div class="reveal" style="border-radius:var(--radius-lg);overflow:hidden;">
+            <img src="images/new-stock-3.png" alt="Fun drinks and specialty beverages section" style="width:100%;aspect-ratio:4/3;object-fit:cover;" loading="lazy" />
+          </div>
+          <div class="reveal" style="border-radius:var(--radius-lg);overflow:hidden;">
+            <img src="images/still.png" alt="Tito's Vodka copper still display" style="width:100%;aspect-ratio:4/3;object-fit:cover;" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+      <div class="cta-banner-bg"></div>
+      <div class="container">
+        <div class="cta-banner-content reveal">
+          <span class="section-label">Come Say Hello</span>
+          <h2>We'd Love to Meet You</h2>
+          <p>Visit us at 2201 Augusta Rd, West Columbia — Monday through Saturday 9 AM to 10 PM, and Sunday 12 PM to 8 PM.</p>
+          <div class="cta-actions">
+            <a href="contact.html" class="btn btn-gold btn-lg">Get Directions</a>
+            <a href="products.html" class="btn btn-outline btn-lg">Browse Products</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="nav-logo">
+              <div class="nav-logo-icon"><img src="images/logo.png" alt="Express Liquor &amp; Wine Logo" /></div>
+              <div class="nav-logo-text">
+                <span class="nav-logo-name">Express Liquor &amp; Wine</span>
+                <span class="nav-logo-sub">West Columbia, SC</span>
+              </div>
+            </a>
+            <p class="footer-brand-desc">Premium spirits, fine wines, craft beers from around the world. 2201 Augusta Rd, West Columbia, SC.</p>
+            <div class="footer-socials">
+              <a href="https://www.facebook.com/p/Express-Liquor-Wine-61587490374263/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">f</a>
+              <a href="https://www.instagram.com/expressliquorandwine" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">in</a>
+              <a href="https://www.tiktok.com/@expressliquorandwine" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">t</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Categories</h4>
+            <ul class="footer-links">
+              <li><a href="products.html#whiskey">Whiskey &amp; Bourbon</a></li>
+              <li><a href="products.html#wine">Wine</a></li>
+              <li><a href="products.html#vodka">Vodka</a></li>
+              <li><a href="products.html#tequila">Tequila</a></li>
+              <li><a href="products.html#rum">Rum</a></li>
+              <li><a href="products.html#cognac">Cognac &amp; Brandy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <address style="font-style:normal;">
+              <div class="footer-contact-item">
+                <span class="footer-contact-icon">📍</span>
+                <p>2201 Augusta Rd<br />West Columbia, SC 29169</p>
+              </div>
+              <div class="footer-contact-item">
+                <span class="footer-contact-icon">📞</span>
+                <p><a href="tel:+18039001358">(803) 900-1358</a></p>
+              </div>
+              <div class="footer-contact-item">
+                <span class="footer-contact-icon">🕐</span>
+                <p>Mon–Sat: 9 AM – 10 PM<br />Sunday: 12 PM – 8 PM</p>
+              </div>
+            </address>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p class="footer-copy">© 2025 Express Liquor &amp; Wine. All rights reserved.</p>
+          <nav class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></nav>
+          <p class="footer-dev">Developed by <a href="https://shivantra.com" target="_blank" rel="noopener noreferrer">Shivantra</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="age-notice">🔞 Must be 21+ to purchase alcohol. Drink responsibly.</div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <!-- Floating Action Buttons -->
+  <div class="fab-stack">
+    <a href="https://wa.me/18039001358" class="fab fab-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.548 4.106 1.508 5.836L.057 23.643a.5.5 0 0 0 .625.625l5.807-1.451A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.793 9.793 0 0 1-4.998-1.367l-.358-.213-3.714.928.944-3.617-.234-.372A9.818 9.818 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+    </a>
+    <button class="fab fab-top" id="fabTop" aria-label="Back to top">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+  </div>
+</body>
+</html>

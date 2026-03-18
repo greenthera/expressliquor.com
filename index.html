@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Express Liquor &amp; Wine | West Columbia, SC — Premium Spirits, Wine &amp; More</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Express Liquor &amp; Wine in West Columbia, SC — your neighborhood destination for premium spirits, wines, beers, and liquors from around the world. Visit us at 2201 Augusta Rd." />
+  <meta name="keywords" content="liquor store West Columbia SC, wine shop Columbia SC, spirits West Columbia, beer store Augusta Rd, Express Liquor Wine, buy whiskey SC, buy wine near me" />
+  <meta name="author" content="Express Liquor &amp; Wine" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://greenthera.shivantra.com/expressliquor.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Express Liquor &amp; Wine | West Columbia, SC" />
+  <meta property="og:description" content="Premium spirits, wines, and liquors from around the world. Located at 2201 Augusta Rd, West Columbia, SC." />
+  <meta property="og:image" content="https://greenthera.shivantra.com/expressliquor.com/images/front-gate.png" />
+  <meta property="og:url" content="https://greenthera.shivantra.com/expressliquor.com/" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Express Liquor &amp; Wine | West Columbia, SC" />
+  <meta name="twitter:description" content="Premium spirits, wines, and liquors. 2201 Augusta Rd, West Columbia, SC." />
+  <meta name="twitter:image" content="images/front-gate.png" />
+
+  <!-- Schema.org Local Business -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LiquorStore",
+    "name": "Express Liquor & Wine",
+    "image": "https://greenthera.shivantra.com/expressliquor.com/images/front-gate.png",
+    "url": "https://greenthera.shivantra.com/expressliquor.com/",
+    "telephone": "+18039001358",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2201 Augusta Rd",
+      "addressLocality": "West Columbia",
+      "addressRegion": "SC",
+      "postalCode": "29169",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 33.9957,
+      "longitude": -81.0927
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "22:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "22:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "20:00" }
+    ],
+    "priceRange": "$$",
+    "servesCuisine": "Liquor Store",
+    "description": "Express Liquor & Wine offers a wide selection of spirits, wines, beers, and liquors from around the world in West Columbia, SC.",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.6",
+      "reviewCount": "120"
+    }
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600;700&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Google Analytics (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QPCP96RNWK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QPCP96RNWK');
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23c9a84c'/><text y='.9em' font-size='70' x='12'>🍷</text></svg>" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       AGE GATE
+  ═══════════════════════════════════════════ -->
+  <div class="age-gate-overlay" id="ageGate" role="dialog" aria-modal="true" aria-labelledby="ageGateTitle">
+    <div class="age-gate-box">
+      <div class="age-gate-logo">Express Liquor &amp; Wine</div>
+      <div class="age-gate-icon">🍷</div>
+      <h2 id="ageGateTitle">Are You 21 or Older?</h2>
+      <p>You must be of legal drinking age to enter this website. By clicking "Yes, I Am", you confirm that you are 21 years of age or older and agree to our terms.</p>
+      <div class="age-gate-actions">
+        <button class="btn btn-gold btn-lg" id="ageYes">Yes, I Am 21+</button>
+        <button class="btn btn-outline btn-lg" id="ageNo">No, I'm Under 21</button>
+      </div>
+      <div class="age-gate-denied" id="ageDenied">
+        ⛔ Sorry, you must be 21 or older to enter. You will be redirected shortly.
+      </div>
+      <p class="age-gate-disclaimer">
+        This website contains information about alcoholic beverages. By entering, you confirm you are of legal drinking age in your region. We support responsible drinking.
+      </p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       HEADER
+  ═══════════════════════════════════════════ -->
+  <header class="header" role="banner">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-logo" aria-label="Express Liquor &amp; Wine Home">
+          <div class="nav-logo-icon"><img src="images/logo.png" alt="Express Liquor &amp; Wine Logo" /></div>
+          <div class="nav-logo-text">
+            <span class="nav-logo-name">Express Liquor &amp; Wine</span>
+            <span class="nav-logo-sub">West Columbia, SC</span>
+          </div>
+        </a>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-menu" role="list">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="liquor-store-west-columbia-sc.html" class="nav-link">Find Us</a></li>
+          <li>
+            <a href="tel:+18039001358" class="nav-phone" aria-label="Call us">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"/></svg>
+              (803) 900-1358
+            </a>
+          </li>
+          <li class="nav-cta"><a href="contact.html" class="btn btn-gold btn-sm">Visit Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ═══════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════ -->
+    <section class="hero" aria-label="Welcome to Express Liquor &amp; Wine">
+      <div class="hero-bg" role="img" aria-label="Inside Express Liquor &amp; Wine store"></div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span></span> West Columbia's Premier Liquor Store
+          </div>
+          <h1>
+            Sip the World,
+            <em>One Bottle at a Time.</em>
+          </h1>
+          <p class="hero-desc">
+            From bold Kentucky bourbons to elegant French wines, from Caribbean rums to Japanese whiskies — Express Liquor &amp; Wine brings the world's finest spirits to West Columbia, SC.
+          </p>
+          <div class="hero-actions">
+            <a href="products.html" class="btn btn-gold btn-lg">Explore Our Selection</a>
+            <a href="contact.html" class="btn btn-outline btn-lg">Get Directions</a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="hero-stat-num" data-count="2000" data-suffix="+">2000+</span>
+              <span class="hero-stat-label">Products</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-num" data-count="50" data-suffix="+">50+</span>
+              <span class="hero-stat-label">Countries</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-num" data-count="15" data-suffix="+ yrs">15+ yrs</span>
+              <span class="hero-stat-label">Experience</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-num" data-count="5" data-suffix="★">5★</span>
+              <span class="hero-stat-label">Rated Store</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll" aria-hidden="true">
+        <div class="hero-scroll-line"></div>
+        Scroll
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         HIGHLIGHTS BAR
+    ═══════════════════════════════════════════ -->
+    <section class="highlights" aria-label="Store highlights">
+      <div class="container">
+        <div class="highlights-grid">
+          <div class="highlight-item">
+            <div class="highlight-icon" aria-hidden="true">🌍</div>
+            <div class="highlight-text">
+              <strong>World Selection</strong>
+              <span>Spirits from 50+ countries</span>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon" aria-hidden="true">⏰</div>
+            <div class="highlight-text">
+              <strong>Open 7 Days</strong>
+              <span>Mon–Sat 9 AM – 10 PM</span>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon" aria-hidden="true">💰</div>
+            <div class="highlight-text">
+              <strong>Competitive Prices</strong>
+              <span>Best deals in the Midlands</span>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon" aria-hidden="true">🏆</div>
+            <div class="highlight-text">
+              <strong>Expert Staff</strong>
+              <span>Knowledgeable &amp; friendly</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CATEGORIES
+    ═══════════════════════════════════════════ -->
+    <section class="categories section-pad" aria-labelledby="cat-title">
+      <div class="container">
+        <div class="text-center reveal">
+          <span class="section-label">What We Carry</span>
+          <h2 class="section-title" id="cat-title">Shop By Category</h2>
+          <div class="divider divider-center"></div>
+          <p class="section-subtitle">From rare single malts to everyday crowd-pleasers, our shelves are stocked with an unmatched variety for every taste and budget.</p>
+        </div>
+
+        <div class="categories-grid">
+          <a href="products.html#spirits" class="category-card featured reveal" aria-label="Shop Spirits & Whiskey">
+            <img src="images/spirits.png" alt="Spirits and whiskey selection at Express Liquor & Wine" class="category-img" loading="lazy" />
+            <div class="category-overlay">
+              <span class="category-tag">Best Sellers</span>
+              <h3>Spirits &amp; Whiskey</h3>
+              <p>Bourbons, Scotch, Irish, Japanese &amp; more</p>
+            </div>
+            <div class="category-arrow" aria-hidden="true">→</div>
+          </a>
+
+          <a href="products.html#wine" class="category-card reveal" aria-label="Shop Wine">
+            <img src="images/wine.png" alt="Wine selection at Express Liquor & Wine" class="category-img" loading="lazy" />
+            <div class="category-overlay">
+              <span class="category-tag">Reds &amp; Whites</span>
+              <h3>Wines</h3>
+              <p>Domestic &amp; imported varieties</p>
+            </div>
+            <div class="category-arrow" aria-hidden="true">→</div>
+          </a>
+
+          <a href="products.html#tequila" class="category-card reveal" aria-label="Shop Tequila">
+            <img src="images/new-stock-1.png" alt="Tequila selection at Express Liquor & Wine" class="category-img" loading="lazy" />
+            <div class="category-overlay">
+              <span class="category-tag">Premium Selection</span>
+              <h3>Tequila &amp; Mezcal</h3>
+              <p>Blanco, Reposado &amp; Añejo varieties</p>
+            </div>
+            <div class="category-arrow" aria-hidden="true">→</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         ABOUT
+    ═══════════════════════════════════════════ -->
+    <section class="about section-pad" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-images reveal">
+            <img src="images/front-gate.png" alt="Express Liquor & Wine storefront on Augusta Rd, West Columbia SC" class="about-img-main" loading="lazy" />
+            <img src="images/inside.png" alt="Inside Express Liquor & Wine" class="about-img-accent" loading="lazy" />
+            <div class="about-badge">
+              <span class="about-badge-num">15+</span>
+              <span class="about-badge-text">Years Serving<br/>West Columbia</span>
+            </div>
+          </div>
+
+          <div class="about-text reveal">
+            <span class="section-label">Our Story</span>
+            <h2 class="section-title" id="about-title">West Columbia's <span class="text-gold">Trusted</span> Spirits Destination</h2>
+            <div class="divider"></div>
+            <p class="section-subtitle">
+              Nestled on Augusta Road in the heart of West Columbia, Express Liquor &amp; Wine has been serving the Midlands community with an extraordinary selection of beverages from around the globe.
+            </p>
+            <ul class="about-list">
+              <li>Over 2,000 products spanning spirits, wines, beers &amp; mixers</li>
+              <li>Sourced from more than 50 countries worldwide</li>
+              <li>Expert staff ready to help you find the perfect bottle</li>
+              <li>Competitive pricing with regular deals &amp; promotions</li>
+              <li>Warm, welcoming atmosphere for every type of shopper</li>
+              <li>Proudly serving West Columbia &amp; the greater Columbia metro</li>
+            </ul>
+            <div class="about-actions">
+              <a href="about.html" class="btn btn-gold">Learn More About Us</a>
+              <a href="contact.html" class="btn btn-outline">Get Directions</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         PRODUCT HIGHLIGHTS
+    ═══════════════════════════════════════════ -->
+    <section class="products-feat section-pad" aria-labelledby="prod-title">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-label">Top Picks</span>
+          <h2 class="section-title" id="prod-title">Popular Categories</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="products-tabs reveal">
+          <button class="tab-btn active">All</button>
+          <button class="tab-btn">Whiskey</button>
+          <button class="tab-btn">Wine</button>
+          <button class="tab-btn">Vodka</button>
+          <button class="tab-btn">Tequila</button>
+          <button class="tab-btn">Rum</button>
+          <button class="tab-btn">Gin</button>
+        </div>
+        <div class="products-grid">
+
+          <div class="product-card reveal">
+            <div class="product-img-wrap">
+              <img src="images/spirits.png" alt="Premium Whiskey selection" loading="lazy" />
+              <span class="product-badge-origin">USA &amp; Scotland</span>
+            </div>
+            <div class="product-info">
+              <p class="product-cat">Whiskey</p>
+              <h3 class="product-name">Bourbon &amp; Scotch</h3>
+              <p class="product-desc">From smooth Kentucky bourbons to peaty single malts</p>
+            </div>
+          </div>
+
+          <div class="product-card reveal">
+            <div class="product-img-wrap">
+              <img src="images/wine.png" alt="Red and white wine selection" loading="lazy" />
+              <span class="product-badge-origin">Worldwide</span>
+            </div>
+            <div class="product-info">
+              <p class="product-cat">Wine</p>
+              <h3 class="product-name">Reds, Whites &amp; Rosés</h3>
+              <p class="product-desc">Curated selection from France, Italy, Napa &amp; beyond</p>
+            </div>
+          </div>
+
+          <div class="product-card reveal">
+            <div class="product-img-wrap">
+              <img src="images/new-stock-2.png" alt="Lunazul Tequila reposado and blanco" loading="lazy" />
+              <span class="product-badge-origin">Jalisco, Mexico</span>
+            </div>
+            <div class="product-info">
+              <p class="product-cat">Tequila</p>
+              <h3 class="product-name">Premium Tequila</h3>
+              <p class="product-desc">Lunazul, Patron, Don Julio, 1800 &amp; more blanco to añejo</p>
+            </div>
+          </div>
+
+          <div class="product-card reveal">
+            <div class="product-img-wrap">
+              <img src="images/new-stock-3.png" alt="Fun drinks and specialty beverages" loading="lazy" />
+              <span class="product-badge-origin">Specialty</span>
+            </div>
+            <div class="product-info">
+              <p class="product-cat">Fun &amp; Specialty</p>
+              <h3 class="product-name">Novelty &amp; RTD Drinks</h3>
+              <p class="product-desc">Ready-to-drink, novelty shots &amp; fun party picks</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="text-center" style="margin-top:2.5rem;">
+          <a href="products.html" class="btn btn-outline">View All Products →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         GALLERY
+    ═══════════════════════════════════════════ -->
+    <section class="gallery section-pad" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="text-center reveal">
+          <span class="section-label">Inside the Store</span>
+          <h2 class="section-title" id="gallery-title">Take a Look Around</h2>
+          <div class="divider divider-center"></div>
+          <p class="section-subtitle">Browse our store and discover an incredible variety of spirits, wines, and collectibles waiting for you.</p>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item tall reveal" aria-label="Open gallery image">
+            <img src="images/inside.png" alt="Interior of Express Liquor & Wine showing full product display" class="gallery-img" loading="lazy" />
+            <div class="gallery-hover" aria-hidden="true">🔍</div>
+          </div>
+          <div class="gallery-item reveal" aria-label="Open gallery image">
+            <img src="images/wine.png" alt="Wine wall at Express Liquor & Wine" class="gallery-img" loading="lazy" />
+            <div class="gallery-hover" aria-hidden="true">🔍</div>
+          </div>
+          <div class="gallery-item reveal" aria-label="Open gallery image">
+            <img src="images/spirits.png" alt="Spirits shelf with tequila, vodka and more" class="gallery-img" loading="lazy" />
+            <div class="gallery-hover" aria-hidden="true">🔍</div>
+          </div>
+          <div class="gallery-item wide reveal" aria-label="Open gallery image">
+            <img src="images/new-stock-2.png" alt="Lunazul Tequila shelf row at Express Liquor & Wine" class="gallery-img" loading="lazy" style="min-height:220px;" />
+            <div class="gallery-hover" aria-hidden="true">🔍</div>
+          </div>
+          <div class="gallery-item reveal" aria-label="Open gallery image">
+            <img src="images/new-stock-1.png" alt="Lunazul Tequila bottles on display" class="gallery-img" loading="lazy" />
+            <div class="gallery-hover" aria-hidden="true">🔍</div>
+          </div>
+          <div class="gallery-item reveal" aria-label="Open gallery image">
+            <img src="images/racks.png" alt="Full liquor racks at Express Liquor & Wine" class="gallery-img" loading="lazy" />
+            <div class="gallery-hover" aria-hidden="true">🔍</div>
+          </div>
+          <div class="gallery-item reveal" aria-label="Open gallery image">
+            <img src="images/new-stock-3.png" alt="Fun drinks and specialty beverages section" class="gallery-img" loading="lazy" />
+            <div class="gallery-hover" aria-hidden="true">🔍</div>
+          </div>
+          <div class="gallery-item reveal" aria-label="Open gallery image">
+            <img src="images/cars.png" alt="Collectible car display inside the store" class="gallery-img" loading="lazy" />
+            <div class="gallery-hover" aria-hidden="true">🔍</div>
+          </div>
+          <div class="gallery-item reveal" aria-label="Open gallery image">
+            <img src="images/still.png" alt="Tito's Vodka display with copper still" class="gallery-img" loading="lazy" />
+            <div class="gallery-hover" aria-hidden="true">🔍</div>
+          </div>
+          <div class="gallery-item reveal" aria-label="Open gallery image">
+            <img src="images/oustide.png" alt="Outside view of Express Liquor & Wine" class="gallery-img" loading="lazy" />
+            <div class="gallery-hover" aria-hidden="true">🔍</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+      <img src="" alt="" class="lightbox-img" id="lightboxImg" />
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close image viewer">✕</button>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         WHY CHOOSE US
+    ═══════════════════════════════════════════ -->
+    <section class="why section-pad" aria-labelledby="why-title">
+      <div class="container">
+        <div class="text-center reveal">
+          <span class="section-label">Why Express Liquor</span>
+          <h2 class="section-title" id="why-title">The Best Reason to Shop With Us</h2>
+          <div class="divider divider-center"></div>
+          <p class="section-subtitle">We don't just sell spirits — we share them. Our passion for great beverages drives everything we do.</p>
+        </div>
+        <div class="why-grid">
+          <div class="why-card reveal">
+            <div class="why-icon" aria-hidden="true">🌐</div>
+            <h3>Global Collection</h3>
+            <p>We stock beverages from over 50 countries — French Cognacs, Scottish single malts, Mexican tequilas, Italian proseccos, and so much more.</p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-icon" aria-hidden="true">💡</div>
+            <h3>Expert Recommendations</h3>
+            <p>Our knowledgeable team can guide you to the perfect bottle — whether you're a first-timer or a seasoned enthusiast.</p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-icon" aria-hidden="true">💸</div>
+            <h3>Unbeatable Value</h3>
+            <p>Competitive everyday prices, seasonal promotions, and regular deals mean you always leave with great value.</p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-icon" aria-hidden="true">📦</div>
+            <h3>Gift Ready</h3>
+            <p>Looking for the perfect gift? We offer gift-friendly packaging and can help you pick a bottle for any occasion.</p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-icon" aria-hidden="true">🔒</div>
+            <h3>Responsible Service</h3>
+            <p>We strictly follow South Carolina's ABC regulations and are committed to responsible and legal alcohol service.</p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-icon" aria-hidden="true">📍</div>
+            <h3>Convenient Location</h3>
+            <p>Easily accessible on Augusta Rd in West Columbia — right in the heart of the Midlands, with ample parking.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         BRANDS
+    ═══════════════════════════════════════════ -->
+    <section class="brands" aria-label="Featured brands">
+      <p class="brands-title">Featured Brands We Carry</p>
+      <div class="brands-track-wrap">
+        <div class="brands-track" aria-hidden="true">
+          <span class="brand-item">Crown Royal</span>
+          <span class="brand-item">Jack Daniel's</span>
+          <span class="brand-item">Hennessy</span>
+          <span class="brand-item">Fireball</span>
+          <span class="brand-item">Tito's Vodka</span>
+          <span class="brand-item">Stella Rosa</span>
+          <span class="brand-item">Svedka</span>
+          <span class="brand-item">1800 Tequila</span>
+          <span class="brand-item">New Amsterdam</span>
+          <span class="brand-item">Evan Williams</span>
+          <span class="brand-item">Bulleit Bourbon</span>
+          <span class="brand-item">Southern Comfort</span>
+          <span class="brand-item">Casamigos</span>
+          <span class="brand-item">Don Julio</span>
+          <span class="brand-item">Grey Goose</span>
+          <span class="brand-item">Jameson</span>
+          <!-- Duplicate for seamless loop -->
+          <span class="brand-item">Crown Royal</span>
+          <span class="brand-item">Jack Daniel's</span>
+          <span class="brand-item">Hennessy</span>
+          <span class="brand-item">Fireball</span>
+          <span class="brand-item">Tito's Vodka</span>
+          <span class="brand-item">Stella Rosa</span>
+          <span class="brand-item">Svedka</span>
+          <span class="brand-item">1800 Tequila</span>
+          <span class="brand-item">New Amsterdam</span>
+          <span class="brand-item">Evan Williams</span>
+          <span class="brand-item">Bulleit Bourbon</span>
+          <span class="brand-item">Southern Comfort</span>
+          <span class="brand-item">Casamigos</span>
+          <span class="brand-item">Don Julio</span>
+          <span class="brand-item">Grey Goose</span>
+          <span class="brand-item">Jameson</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         TESTIMONIALS
+    ═══════════════════════════════════════════ -->
+    <section class="testimonials section-pad" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="text-center reveal">
+          <span class="section-label">Customer Reviews</span>
+          <h2 class="section-title" id="testimonials-title">What Our Customers Say</h2>
+          <div class="divider divider-center"></div>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card reveal">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testimonial-text">"Best liquor store in West Columbia by far. They have an incredible selection — from local SC spirits to rare imports I can't find anywhere else. The staff always knows exactly what to recommend."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">MJ</div>
+              <div>
+                <p class="author-name">Marcus J.</p>
+                <p class="author-loc">West Columbia, SC</p>
+                <span class="google-badge">🔵 Google Review</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testimonial-text">"I've been coming here for years. The prices are great and the selection of wines is unmatched. The staff helped me find the perfect bottle for my wedding and it was a huge hit!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">SR</div>
+              <div>
+                <p class="author-name">Sarah R.</p>
+                <p class="author-loc">Columbia, SC</p>
+                <span class="google-badge">🔵 Google Review</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testimonial-text">"Massive selection of whiskey — I found bottles here I've never seen at any other store in the Midlands. Friendly staff, clean store, easy parking. My go-to spot every week."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">DK</div>
+              <div>
+                <p class="author-name">Derek K.</p>
+                <p class="author-loc">Cayce, SC</p>
+                <span class="google-badge">🔵 Google Review</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         LOCATION
+    ═══════════════════════════════════════════ -->
+    <section class="location section-pad" id="location" aria-labelledby="location-title">
+      <div class="container">
+        <div class="text-center reveal" style="margin-bottom:3rem;">
+          <span class="section-label">Find Us</span>
+          <h2 class="section-title" id="location-title">Visit Our Store</h2>
+          <div class="divider divider-center"></div>
+          <p class="section-subtitle">Conveniently located on Augusta Rd in West Columbia — easy to find, easier to love.</p>
+        </div>
+        <div class="location-grid">
+          <div class="location-info">
+            <div class="info-card reveal">
+              <div class="info-icon" aria-hidden="true">📍</div>
+              <div>
+                <p class="info-label">Address</p>
+                <p class="info-value">2201 Augusta Rd<br />West Columbia, SC 29169</p>
+                <p class="info-sub">Near the Cayce &amp; West Columbia border</p>
+              </div>
+            </div>
+
+            <div class="info-card reveal">
+              <div class="info-icon" aria-hidden="true">📞</div>
+              <div>
+                <p class="info-label">Phone</p>
+                <p class="info-value"><a href="tel:+18039001358" style="color:var(--gold)">(803) 900-1358</a></p>
+                <p class="info-sub">Call ahead for special orders</p>
+              </div>
+            </div>
+
+            <div class="info-card reveal">
+              <div class="info-icon" aria-hidden="true">🕐</div>
+              <div>
+                <p class="info-label">Store Hours</p>
+                <table class="hours-table" aria-label="Store hours">
+                  <tr data-day="1"><td>Monday</td><td>9:00 AM – 10:00 PM</td></tr>
+                  <tr data-day="2"><td>Tuesday</td><td>9:00 AM – 10:00 PM</td></tr>
+                  <tr data-day="3"><td>Wednesday</td><td>9:00 AM – 10:00 PM</td></tr>
+                  <tr data-day="4"><td>Thursday</td><td>9:00 AM – 10:00 PM</td></tr>
+                  <tr data-day="5"><td>Friday</td><td>9:00 AM – 10:00 PM</td></tr>
+                  <tr data-day="6"><td>Saturday</td><td>9:00 AM – 10:00 PM</td></tr>
+                  <tr data-day="0"><td>Sunday</td><td>12:00 PM – 8:00 PM</td></tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-wrap reveal">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.42!2d-81.0927!3d33.9957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f8b86a4a1a4b3d%3A0x1234567890abcdef!2s2201%20Augusta%20Rd%2C%20West%20Columbia%2C%20SC%2029169!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+              title="Express Liquor &amp; Wine location map"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <div class="map-cta">
+              <div>
+                <strong>Express Liquor &amp; Wine</strong>
+                <p>2201 Augusta Rd, West Columbia, SC 29169</p>
+              </div>
+              <a href="https://maps.app.goo.gl/KVCXf3nKRr3uRre5A" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm">Open in Maps →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CTA BANNER
+    ═══════════════════════════════════════════ -->
+    <section class="cta-banner" aria-label="Call to action">
+      <div class="cta-banner-bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="cta-banner-content reveal">
+          <span class="section-label">Come Visit</span>
+          <h2>Your Next Favorite Bottle Is Waiting</h2>
+          <p>Whether you're shopping for a celebration, building your home bar, or just picking up something for tonight — we've got you covered with the best selection in West Columbia.</p>
+          <div class="cta-actions">
+            <a href="products.html" class="btn btn-gold btn-lg">Explore Products</a>
+            <a href="tel:+18039001358" class="btn btn-outline btn-lg">📞 Call Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="nav-logo" style="margin-bottom:0.5rem;">
+              <div class="nav-logo-icon"><img src="images/logo.png" alt="Express Liquor &amp; Wine Logo" /></div>
+              <div class="nav-logo-text">
+                <span class="nav-logo-name">Express Liquor &amp; Wine</span>
+                <span class="nav-logo-sub">West Columbia, SC</span>
+              </div>
+            </a>
+            <p class="footer-brand-desc">Your neighborhood destination for premium spirits, fine wines, craft beers, and liquors from around the world. Serving West Columbia since 2009.</p>
+            <div class="footer-socials">
+              <a href="https://www.facebook.com/p/Express-Liquor-Wine-61587490374263/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook" title="Facebook">f</a>
+              <a href="https://www.instagram.com/expressliquorandwine" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram" title="Instagram">in</a>
+              <a href="https://www.tiktok.com/@expressliquorandwine" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok" title="TikTok">t</a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="liquor-store-west-columbia-sc.html">Find Us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Categories</h4>
+            <ul class="footer-links">
+              <li><a href="products.html#whiskey">Whiskey &amp; Bourbon</a></li>
+              <li><a href="products.html#wine">Wine</a></li>
+              <li><a href="products.html#vodka">Vodka &amp; Gin</a></li>
+              <li><a href="products.html#tequila">Tequila &amp; Mezcal</a></li>
+              <li><a href="products.html#rum">Rum</a></li>
+              <li><a href="products.html#cognac">Cognac &amp; Brandy</a></li>
+              <li><a href="products.html#beer">Beer &amp; Cider</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Contact Us</h4>
+            <address style="font-style:normal;">
+              <div class="footer-contact-item">
+                <span class="footer-contact-icon" aria-hidden="true">📍</span>
+                <p>2201 Augusta Rd<br />West Columbia, SC 29169</p>
+              </div>
+              <div class="footer-contact-item">
+                <span class="footer-contact-icon" aria-hidden="true">📞</span>
+                <p><a href="tel:+18039001358">(803) 900-1358</a></p>
+              </div>
+              <div class="footer-contact-item">
+                <span class="footer-contact-icon" aria-hidden="true">🕐</span>
+                <p>Mon–Sat: 9 AM – 10 PM<br />Sunday: 12 PM – 8 PM</p>
+              </div>
+            </address>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p class="footer-copy">© 2025 Express Liquor &amp; Wine. All rights reserved.</p>
+          <nav class="footer-legal" aria-label="Legal links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+            <a href="liquor-store-west-columbia-sc.html">Sitemap</a>
+          </nav>
+          <p class="footer-dev">Developed by <a href="https://shivantra.com" target="_blank" rel="noopener noreferrer">Shivantra</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="age-notice" role="note">
+      🔞 Must be 21+ to purchase alcohol. Drink responsibly. Don't drink and drive.
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <!-- Floating Action Buttons -->
+  <div class="fab-stack">
+    <a href="https://wa.me/18039001358" class="fab fab-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.548 4.106 1.508 5.836L.057 23.643a.5.5 0 0 0 .625.625l5.807-1.451A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.793 9.793 0 0 1-4.998-1.367l-.358-.213-3.714.928.944-3.617-.234-.372A9.818 9.818 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+    </a>
+    <button class="fab fab-top" id="fabTop" aria-label="Back to top">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+  </div>
+</body>
+</html>
